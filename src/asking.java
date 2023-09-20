@@ -64,18 +64,44 @@ import java.util.Scanner;
 
 
 
+//public class asking {
+//    public static void main(String[] args) {
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Enter the loan amount: £");
+//        double loanAmount = input.nextDouble();
+//        System.out.print("Enter the annual interest rate (in percentage): ");
+//        double annualInterestRate = input.nextDouble();
+//        System.out.print("Enter the number of years for the loan: ");
+//        int loanDurationYears = input.nextInt();
+//        double monthlyInterestRate = (annualInterestRate / 100) / 12;
+//        int loanMonths = loanDurationYears * 12;
+//        double monthlyPayment = loanAmount * (monthlyInterestRate / (1 - Math.pow(1 + monthlyInterestRate, -loanMonths)));
+//        System.out.printf("Your monthly payment will be: £%.2f%n", monthlyPayment);
+//    }
+//}
+
 public class asking {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter the loan amount: £");
-        double loanAmount = input.nextDouble();
-        System.out.print("Enter the annual interest rate (in percentage): ");
-        double annualInterestRate = input.nextDouble();
-        System.out.print("Enter the number of years for the loan: ");
-        int loanDurationYears = input.nextInt();
-        double monthlyInterestRate = (annualInterestRate / 100) / 12;
-        int loanMonths = loanDurationYears * 12;
-        double monthlyPayment = loanAmount * (monthlyInterestRate / (1 - Math.pow(1 + monthlyInterestRate, -loanMonths)));
-        System.out.printf("Your monthly payment will be: £%.2f%n", monthlyPayment);
+        System.out.println("Enter your name: ");
+        String name = input.nextLine();
+        Scanner input1 = new Scanner(System.in);
+        System.out.println("Enter your surname: ");
+        String surname = input1.nextLine();
+        Scanner input2 = new Scanner(System.in);
+        System.out.println("Enter the total value of your order: ");
+        float value = input2.nextFloat();
+        Scanner input3 = new Scanner(System.in);
+        System.out.println("Enter the amount you wish to pay as deposit: ");
+        float amount = input3.nextFloat();
+        System.out.println("== Receipt  ==");
+        System.out.println("Customer: " + name.substring(0,1).toUpperCase() + " " +surname);
+        System.out.println("Order Total: " + value);
+        System.out.println("Deposit Paid: " + amount);
+        float remainder = value - amount;
+        System.out.println("Remainder: " + remainder);
+        System.out.println("You get a free toaster!\nHave a nice day!");
+
+
     }
 }
