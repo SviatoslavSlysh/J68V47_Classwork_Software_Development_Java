@@ -42,25 +42,31 @@ import java.util.Scanner;
 
 //Exercise 3
 public class lesson04102023 {
-    public static void main(String[] args) {
+//    public static void printmessage(){
+//        System.out.printf("amazing");
+//    }
+        public static void main (String[]args){
         Scanner input = new Scanner(System.in);
         int score = 3;
         for (int count = 0; count < 10; count++) {
-            String[] question = {"2+2?: ", "3+3?: ", "4+4?: ", "5+5?: ","6+6?: ","7+7?: ", "8+8?: ", "9+9?: ", "10+10?: "};
+            String[] question = {"2+2?: ", "3+3?: ", "4+4?: ", "5+5?: ", "6+6?: ", "7+7?: ", "8+8?: ", "9+9?: ", "10+10?: "};
             Integer[] answer = {4, 6, 8, 10, 12, 14, 16, 18, 20};
             System.out.printf(question[count]);
             int resp = input.nextInt();
             if (resp != answer[count]) {
                 System.out.println("Wrong answer");
                 score -= 1;
-                System.out.println("You have 3 heart: " + score);
+                System.out.format("You have  heart:%s%n ", score);
+//                System.out.format("%s.......%.2f%n ", number1name, number1price);
                 if (score == 0) {
                     System.out.println("Your Heart is Over.");
                     break;
                 }
             } else {
                 System.out.println("Your answer is correct");
+//                printmessage();
             }
         }
     }
 }
+
